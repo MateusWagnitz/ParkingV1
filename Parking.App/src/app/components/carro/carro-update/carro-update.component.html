@@ -1,0 +1,41 @@
+<div>
+  <mat-card>
+    <mat-card-title>Alterar Veículo</mat-card-title>
+    <form>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Placa</mat-label>
+          <input matInput placeholder="Placa" [(ngModel)]="carro.placa" name="placa" readonly>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Marca</mat-label>
+
+          <mat-select [formControl]="marcaControl" required [(ngModel)]="carro.marca">
+            <mat-option>--</mat-option>
+            <mat-option *ngFor="let carro of carros" [value]="carro.value">
+              {{carro.viewValue}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="marcaControl.hasError('required')">Campo obrigatório</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Modelo</mat-label>
+          <input matInput placeholder="Modelo" [(ngModel)]="carro.modelo" name="modelo">
+        </mat-form-field>
+      </div>
+
+
+    </form>
+
+    <button mat-raised-button (click)="atualizarCarro()" color="primary"> Atualizar </button>
+
+    <button mat-raised-button (click)="cancelar()">Cancelar </button>
+
+  </mat-card>
+</div>

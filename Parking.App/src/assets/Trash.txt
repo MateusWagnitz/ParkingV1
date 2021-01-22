@@ -1,0 +1,195 @@
+Carro Read html
+
+
+
+        <!-- <ng-container matColumnDef="clienteId">
+          <th mat-header-cell *matHeaderCellDef>Cliente Id</th>
+          <td mat-cell *matCellDef="let row">{{row.clienteId}}</td>
+        </ng-container> -->
+
+        <!-- <ng-container matColumnDef="acoes">
+            <th mat-header-cell *matHeaderCellDef>Ações</th>
+
+            <td mat-cell *matCellDef="let row">
+                <a routerLink="/carros/update/{{row.id }}" class="edit">
+                    <i class="material-icons">edit</i>
+                </a>
+
+                <a routerLink="/carros/delete/{{ row.id }}" class="delete">
+                    <i class="material-icons">delete </i>
+                </a>
+            </td>
+        </ng-container> -->
+
+
+Carro read ts
+
+//'clienteId',
+
+_______________________________________________________________________________________
+
+Cliente Create html
+
+ <!-- <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Entrada</mat-label> -->
+                <!-- <input matInput type="datetime-local" matInput [(ngModel)]="estacionamento.entrada" [ngModelOptions]="{standalone: true}" /> -->
+                <!-- <input matInput type="datetime-local" (change)="procurarData()" matInput [(ngModel)]="estacionamento.entrada" [ngModelOptions]="{standalone: true}" />
+            </mat-form-field>
+        </div> -->
+
+<!--
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Nome Completo</mat-label>
+                <mat-select [(ngModel)]="cliente.nomeCompleto" name="placa">
+                    <mat-option *ngFor="let carro of carros" [value]="carro.carroId"> {{carro.placa}} </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div> -->
+
+
+Cliente Create ts
+
+
+    // this.carregarTicket();
+    // this.carregarCarros();
+
+  // carregarCarros(): void {
+  //   this.carroServico.Get().subscribe(a => {
+  //     this.carros = a;
+  //   });
+  // }
+
+  // carregarTicket(): void {
+  //   this.financeiroServico.getAll().subscribe(a => {
+  //     this.financeiro = a;
+  //   });
+  // }
+
+
+
+Cliente Delete html
+
+
+            <!-- <div>
+                <mat-form-field>
+                    <input matInput placeholder="Entrada" [value]="cliente.entrada | date: 'dd/MM/yyyy - HH:mm:ss' " name="entrada" disabled>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field>
+                    <input matInput placeholder="Saida" [value]="cliente.saida | date: 'dd/MM/yyyy - HH:mm:ss' " name="saida" disabled>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field>
+                    <input matInput placeholder="Placa" [value]="cliente.valorTotal | currency: 'BRL'" name="entrada" disabled>
+                </mat-form-field>
+            </div> -->
+
+
+Cliente Read html
+
+<!--
+    <ng-container matColumnDef="acoes">
+      <th style="text-align: center" mat-header-cell *matHeaderCellDef>
+        Ações
+      </th>
+      <td style="text-align: center" mat-cell *matCellDef="let row">
+        <a routerLink="/cliente/update/{{ row.id }}" class="edit">
+          <button mat-raised-button color="primary">Marcar Saida</button>
+        </a>
+        <a routerLink="/cliente/delete/{{ row.id }}" class="delete">
+          <button mat-raised-button color="warn">Excluir Entrada</button>
+        </a>
+      </td>
+    </ng-container> -->
+
+
+Cliente Read ts
+
+  // displayedColumns = ['id', 'placa', 'entradaData', 'entradaHora', 'saidaData', 'saidaHora', 'valorHora', 'valotTotal', 'acoes'];
+
+  // displayedColumns = ['placa', 'entrada', 'saida',  'valorTotal', 'acoes'];
+
+
+Cliente Update ts
+
+<!-- <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Entrada</mat-label>
+          <input
+            matInput
+            type="datetime-local"
+            matInput
+            placeholder="Entrada"
+            [(ngModel)]="cliente.entrada"
+            name="entrada"
+            disabled
+          />
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Saída</mat-label>
+          <input
+            matInput
+            type="datetime-local"
+            matInput
+            placeholder="Saida"
+            [(ngModel)]="cliente.saida"
+            name="saida"
+          />
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Placa</mat-label>
+          <mat-select
+            [(ngModel)]="cliente.carroId"
+            name="placa"
+            [disabled]="true"
+          >
+            <mat-option
+              *ngFor="let carro of carros"
+              [value]="carro.placa"
+            >
+              {{ carro.placa }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Valor Total</mat-label>
+          <input
+            matInput
+            placeholder="valorTotal"
+            [(ngModel)]="cliente.valorTotal"
+            name="valorTotal"
+            disabled
+          />
+        </mat-form-field>
+      </div> -->
+
+
+_______________________________________________________________________________________
+
+
+ticket update html
+
+
+      <!-- <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Placa</mat-label>
+          <input required type="text" matInput [(ngModel)]="financeiro.carroId" [ngModelOptions]="{standalone: true}" maxlength="8" />
+        </mat-form-field>
+      </div> -->
+
+

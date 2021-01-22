@@ -1,0 +1,30 @@
+<div>
+  <mat-card>
+    <mat-card-title>Deseja excluir esse Ticket? </mat-card-title>
+    <form>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Ticket Id" [value]="financeiro.ticketId" name="ticketId" disabled>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Valor" [value]="financeiro.valorFinal" name="valor" disabled>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Hora Entrada" [value]="financeiro.horaEntrada" name="horaEntrada" disabled>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Hora Saida" [value]="financeiro.horaSaida" name="horaSaida" disabled>
+        </mat-form-field>
+      </div>
+    </form>
+    <button mat-raised-button (click)="apagarTicket()" color="warn"> Excluir </button>
+
+    <button mat-raised-button (click)="cancelar()"> Cancelar </button>
+  </mat-card>
+</div>

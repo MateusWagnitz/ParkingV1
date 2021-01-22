@@ -1,0 +1,44 @@
+<mat-card>
+  <mat-card-title>Ticket</mat-card-title>
+  <form>
+
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Placa</mat-label>
+        <input required type="text" matInput [(ngModel)]="financeiro.carroId" [ngModelOptions]="{standalone: true}"
+          maxlength="8" />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Hora de Entrada</mat-label>
+        <input required matInput type="time" matInput [(ngModel)]="financeiro.horaEntrada"
+          [ngModelOptions]="{standalone: true}">
+
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Hora de Saída</mat-label>
+        <input required matInput type="time" matInput [(ngModel)]="financeiro.horaSaida"
+          [ngModelOptions]="{standalone: true}">
+
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Valor Final</mat-label>
+        <input required type="number" matInput [(ngModel)]="financeiro.valorFinal" maxlength="6"
+          [ngModelOptions]="{standalone: true}" />
+      </mat-form-field>
+    </div>
+
+  </form>
+  <button mat-raised-button (click)="cadastrarTicket()" color="primary">Salvar
+  </button>
+
+  <button mat-raised-button (click)="Cancelar()">Cancelar</button>
+</mat-card>

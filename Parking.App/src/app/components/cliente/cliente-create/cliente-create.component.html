@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-title>Novo Cliente</mat-card-title>
+  <form>
+
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>CPF</mat-label>
+        <input matInput type="text" matInput [(ngModel)]="cliente.cpf" [ngModelOptions]="{standalone: true}"
+          maxlength="12" />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Nome Completo</mat-label>
+        <input matInput type="text" matInput [(ngModel)]="cliente.nomeCompleto" [ngModelOptions]="{standalone: true}"
+          maxLength="25" />
+      </mat-form-field>
+    </div>
+
+
+  </form>
+  <button mat-raised-button (click)="cadastrarCliente()" color="primary">Salvar
+  </button>
+
+  <button mat-raised-button (click)="cancelar()">Cancelar</button>
+</mat-card>
